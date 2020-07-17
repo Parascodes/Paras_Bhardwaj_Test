@@ -3,7 +3,7 @@ def string_version_compare():
     str2 = input('Please enter second string version : ')
     l1 = str1.split('.')
     l2 = str2.split('.')
-    s1 = ''
+    s1 = ''       #equalizing the length of strings is the key to this problem
     s2 = ''
     len_diff = 0    #eqaulizing the length of strings by adding zeroes at the end depending upon the difference of length in two strings
     for i in l1:
