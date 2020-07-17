@@ -3,14 +3,14 @@ def string_version_compare():
     str2 = input('Please enter second string version : ')
     l1 = str1.split('.')
     l2 = str2.split('.')
-    s1 = ''
+    s1 = ''     #equalizing the length of strings is the key to this problem
     s2 = ''
-    len_diff = 0
+    len_diff = 0    #eqaulizing the length of strings by adding zeroes at the end depending upon the difference of length in two strings
     for i in l1:
         s1 = s1+i
     for j in l2:
         s2 = s2+j
-    if len(s1) > len(s2):
+    if len(s1) > len(s2): # comparing the lengths of the two strings
         len_diff = len(s1) - len(s2)
         for var in range(0,len_diff):
             s2 = s2 + '0'
@@ -18,7 +18,7 @@ def string_version_compare():
         len_diff = len(s2) - len(s1)
         for var in range(0,len_diff):
             s1 = s1 + '0'
-    s2 = int(s2)
+    s2 = int(s2)    #finally converting the string number into integers so that it can be compared that which one is greater
     s1 = int(s1)
     if s1>s2 :
         return('String Version 1 : %s is greater'%(str1))
