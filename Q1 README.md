@@ -3,7 +3,7 @@ def line_overlap():
     b = int(input('Please enter ending point of first line : '))
     p = int(input('Please enter starting point of second line : '))
     q = int(input('Please enter ending point of second line : '))
-    if a>b:
+    if a>b:  # If input is given in for ex- 4,1 format and not 1,4 then to change it to 1,4 format so as to count the range
         a = a+b
         b = a-b
         a = a-b
@@ -14,7 +14,7 @@ def line_overlap():
     l1 = []
     l2 = []
     flag = 0
-    for i in range(a,b+1):
+    for i in range(a,b+1): # The logic is that if any 2 line segment on x axis overlap then it must have at least one point in common between those two lines
         l1.append(i)
     for j in range(p,q+1):
         l2.append(j)
