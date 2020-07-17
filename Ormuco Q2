@@ -1,1 +1,28 @@
-
+def string_version_compare():
+    str1 = input('Please enter first string version : ')
+    str2 = input('Please enter second string version : ')
+    l1 = str1.split('.')
+    l2 = str2.split('.')
+    s1 = ''
+    s2 = ''
+    len_diff = 0
+    for i in l1:
+        s1 = s1+i
+    for j in l2:
+        s2 = s2+j
+    if len(s1) > len(s2):
+        len_diff = len(s1) - len(s2)
+        for var in range(0,len_diff):
+            s2 = s2 + '0'
+    elif len(s2) > len(s1):
+        len_diff = len(s2) - len(s1)
+        for var in range(0,len_diff):
+            s1 = s1 + '0'
+    s2 = int(s2)
+    s1 = int(s1)
+    if s1>s2 :
+        return('String Version 1 : %s is greater'%(str1))
+    elif s2>s1 :
+        return('String Version 2 : %s is greater'%(str2))
+    else :
+        return('Both String Versions are equal')
